@@ -19,9 +19,21 @@ public class UserServiceAspect {
 			 "|| within(@org.springframework.stereotype.Service *)"
 			 +"|| within(@org.springframework.web.bind.annotation.RestController *)")
 	
-			public void springPointCutExp() {
+	public void springPointCutExp() {
+		
+		
 				
 	}
+	
+	@Pointcut("within(com.zee.zee5app.controller..*) "+
+			 "|| within(com.zee.zee5app.service.Impl..*)"
+			 )
+	
+	public void springPointCutExp2() {
+		
+	}
+	
+	
 	
 	@AfterThrowing(pointcut= "springPointCutExp()" , throwing="e")
 	public void logAfterThrowingException(JoinPoint joinPoint, Throwable e){
@@ -30,6 +42,8 @@ public class UserServiceAspect {
 				joinPoint.getSignature().getName(), e.getCause()!=null ? e.getCause():"NULL");
 	 
 	}
+	
+	
 	
 	@Before(value="execution(* com.zee.zee5app.service.Impl.*.get*(..))")
 	public void beforeAllServiceMethods(JoinPoint joinPoint) {

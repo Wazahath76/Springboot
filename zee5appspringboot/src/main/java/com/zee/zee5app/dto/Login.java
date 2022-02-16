@@ -54,6 +54,6 @@ public class Login implements Comparable<Login>{
     
     @JoinColumn(name = "regId")
     @JsonProperty(access=Access.WRITE_ONLY)
-	private Register register;
+	private User register;
 
 }

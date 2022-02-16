@@ -8,7 +8,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.zee.zee5app.dto.Register;
+import com.zee.zee5app.dto.User;
 import com.zee.zee5app.dto.Subscription;
 import com.zee.zee5app.exception.IdNotFoundException;
 import com.zee.zee5app.exception.InvalidAmountException;

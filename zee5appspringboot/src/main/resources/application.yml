@@ -19,7 +19,9 @@ spring:
       ddl-auto: update
 server:
   port: 9007
-  servlet:
-    context-path: /api
+zee5app:
+  app:
+    jwtSecret: secretkey
+    jwtExpirationMs: 86400000
    
         
